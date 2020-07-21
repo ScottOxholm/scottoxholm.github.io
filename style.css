@@ -12,29 +12,18 @@ html, body {
   outline: none;
 }
 
-.video{
-  width: 100%;
-  max-width: 1000px;
+/*h1 div and section class for all headers ex.Gallery*/
+
+h1{text-align: center;}
+
+* {
+  box-sizing: border-box;
 }
 
-.logo{
-  width: 100%;
-  max-width: 100px;
-  opacity: 0;
-  transition: 0.5s;
+.section{
+  font-size: 300%; 
+  font-weight:500;
 }
-
-.logo:hover,
-.logo:focus {
-  cursor: pointer;
-  opacity: 0.5;
-}
-
-#email{
-  font-style: italic;
-  display: none;
-}
-
 
 #menu {
   transition: margin-left .5s;
@@ -63,35 +52,46 @@ html, body {
   z-index: 1;
 }
 
-h1{text-align: center;}
 
-* {
-  box-sizing: border-box;
+.video{
+  width: 100%;
+  max-width: 1000px;
+}
+ 
+/*bubbles under the closing video */
+.logo{
+  width: 100%;
+  max-width: 100px;
+  opacity: 0.1;
+  transition: 0.5s;
 }
 
-.section{
-  font-size: 300%; 
-  font-weight:500;
+.logo:hover,
+.logo:focus {
+  cursor: pointer;
+  opacity: 0.5;
 }
 
+#email{
+  font-style: italic;
+  display: none;
+}
+
+/************************************** GALLERY **********************************************/
+/*used to separate images*/
 .column {
   float: left;
   width: 25%;
   padding-right: 5%px;
 }
 
-/* Clearfix (clear floats) */
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-} 
-
+/*I didn't want any of the mp3 files showing for the jazz songs*/
 .music{
     width:200;
     visibility: hidden;
 }
 
+/*used to store the hover words*/
 .container {
   position: relative;
   text-align: center;
@@ -119,7 +119,7 @@ h1{text-align: center;}
   transform: translate(-50%, -50%);
 }
 
-
+/************************************** CODING PROJECTS **********************************************/
 .project{
   padding-left: 50px;
   padding-top: 20px;
@@ -152,6 +152,7 @@ h1{text-align: center;}
   transform: translate(-50%, -50%);
 }
 
+/*I also used containers like I had in the gallery for the projects*/
 .container:hover,
 .container:focus {
   cursor: pointer;
@@ -163,6 +164,9 @@ h1{text-align: center;}
 .container:hover .project{opacity: 0.1;}
 .container:hover .hover{opacity: 1; font-size: 40px;}
 
+
+
+/************************************** BUTTONS **********************************************/
 .button {
   background-color: #dfdfdf; /* Green */
   border: none;
@@ -190,6 +194,9 @@ h1{text-align: center;}
 
 .button:hover {opacity: 0.7;}
 
+
+
+/********************************** MODAL (aka zoomed gallery images) *******************************/
 
 /* The Modal (background) */
 .modal {
@@ -227,6 +234,7 @@ h1{text-align: center;}
   height: 150px;
 }
 
+/* Title of Modal Image */
 #title {
     position: absolute;
     top:8%;
@@ -268,16 +276,6 @@ h1{text-align: center;}
   transition: 0.3s;
 }
 
-/* .right {
-  position: absolute;
-  top: 50%;
-  right: 20%;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.3s;
-} */
-
 .close:hover,
 .close:focus {
   color: #bbb;
@@ -285,6 +283,7 @@ h1{text-align: center;}
   cursor: pointer;
 }
 
+/*Arrow to move through images*/
 .arrow {
     position: absolute;
     top: 50%;
