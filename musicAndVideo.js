@@ -24,6 +24,9 @@ function playClosing(vid){
   }
 }
 
+
+//only one song should play at a time
+//when a different song is selected the first song will be paused
 var songs = document.getElementsByClassName("music"); 
 var play1 = false;
 var play2 = false;
@@ -104,10 +107,16 @@ function pause() {
   play4 = false; 
 } 
 
+//I wanted to the text colour to change to reflect what song is being played 
+//only one should be black at a time
+
+
 function changeColor(button, i, j, k){
   document.getElementsByClassName("button button7")[i].style.color="white";
   document.getElementsByClassName("button button7")[j].style.color="white";
   document.getElementsByClassName("button button7")[k].style.color="white";
   
+  //if you click a new button the old one should change to white and the new one should be black
+  //if you click the same button for a second time it should go back to black
   button.style.color = (button.style.color == "white") ? "black" : "white";
 }

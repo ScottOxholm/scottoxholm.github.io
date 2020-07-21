@@ -1,3 +1,5 @@
+
+//just defines what happens when you click on the menu button (toggling the visibility)
 function menu(){
     if(document.getElementsByClassName('navigation')[1].style.visibility==`hidden`){
       document.getElementsByClassName('navigation')[0].style="font-style: italic; text-decoration: white; font-size: 40px;";
@@ -19,7 +21,7 @@ function menu(){
   
   
   
-  // When the user scrolls the page, execute myFunction
+  // When the user scrolls the page, execute topScroll
   window.onscroll = function() {topScroll()};
   
   // Get the navbar
@@ -37,6 +39,7 @@ function menu(){
     }
   }
   
+  //This function shows the contact buttons with matched timing to the video in the contact section
   function timedReveal(){
     setTimeout(function(){document.getElementsByClassName("logo")[0].style.opacity="1"},6000);
     setTimeout(function(){document.getElementsByClassName("logo")[1].style.opacity="1"},11000);
@@ -45,7 +48,7 @@ function menu(){
   }
   
   
-  
+  //this function copies my email to the clipboard of the user
   function copy() {
     var copyText = document.getElementById("email");
     copyText.style.display="block";

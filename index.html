@@ -7,6 +7,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="S.png">
 </head>
 
+<!-- //////////////////////////////////NAVIGATION MENU////////////////////////////////////////// -->
+
 <div id="menu">
   <button class="navigation" style="text-decoration: white; font-size: 40px;" onclick="menu()">☰</button>
   <button class="navigation" onclick="document.getElementsByClassName('section')[0].scrollIntoView({behavior: `smooth`, block: `center`})">Hello!</button>  
@@ -14,6 +16,8 @@
   <button class="navigation" onclick="document.getElementsByClassName('button')[4].scrollIntoView({behavior: `smooth`, block: `center`})">Gallery</button>  
   <button class="navigation" onclick="document.getElementsByClassName(`video`)[1].scrollIntoView({behavior: `smooth`, block: `end`})">Contact Info</button>  
 </div>
+
+<!-- //////////////////////////////////INTRO VIDEO////////////////////////////////////////// -->
 
 <h1><i class="section">Hello!</i></h1>
 <hr style="max-width: 50%;">
@@ -27,6 +31,10 @@
     
 </div>
 </center>
+<div style="padding-bottom: 300px;"></div>
+
+
+<!-- //////////////////////////////////CODING PROJECTS////////////////////////////////////////// -->
 
 <h1><i class="section">Projects</i></h1>
 <hr style="max-width: 50%;">
@@ -84,6 +92,9 @@
 
   <div style="padding-bottom: 300px;"></div>
 
+
+<!-- //////////////////////////////////GALLERY BEGINS////////////////////////////////////////// -->
+
 <h1><i class="section">The Gallery</i></h1>
 <hr style="max-width: 50%;">
 
@@ -111,6 +122,7 @@
 
 <button style = "max-width: 25%; margin-left:37%; display: block; color: black;" class="button"; onclick="showAll()">Show All</button>
 <button style = "max-width: 25%; margin-left:37%; top:50%; display: inline-block;" class="button button6"; onclick="hideAll()">Hide All</button>
+
 
 <!-- //////////////////////////////////LIFE'S COMMITMENTS////////////////////////////////////////// -->
 <button class="button button5"; onclick="showHide(0)">Life's Committments</button>
@@ -304,6 +316,31 @@
 <!-- </div> -->
 
 <div style="padding-bottom: 200px;"></div>
+  <!-- //////////////////////////////////ZOOMED GALLERY////////////////////////////////////////// -->
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <i class="arrow right"></i>
+  <i class="arrow left"></i>
+  <img class="modal-content" id="img01" >
+  <div id="caption"></div>
+  <div id="title"></div>
+</div>
+
+<!-- //////////////////////////////////ZOOMED GALLERY////////////////////////////////////////// -->
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <i class="arrow right"></i>
+  <i class="arrow left"></i>
+  <img class="modal-content" id="img01" >
+  <div id="caption"></div>
+  <div id="title"></div>
+</div>
+
+<!-- //////////////////////////////////CONTACT INFO////////////////////////////////////////// -->
 
 <h1><i class="section">Contact Info</i></h1>
 <hr style="max-width: 50%;">
@@ -335,15 +372,6 @@
   </center>>
 
 
-<!-- The Modal -->
-<div id="myModal" class="modal">
-  <span class="close">&times;</span>
-  <i class="arrow right"></i>
-  <i class="arrow left"></i>
-  <img class="modal-content" id="img01" >
-  <div id="caption"></div>
-  <div id="title"></div>
-</div>
 <script src="gallery.js"></script>
 <script src="menuAndContact.js"></script>
 <script src="musicAndVideo.js"></script>

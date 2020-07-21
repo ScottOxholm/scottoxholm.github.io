@@ -1,3 +1,5 @@
+
+/////////////////////////////////////ZOOMED GALLERY////////////////////////////////////
 // Get the <span> element that closes the modal
 var exit = document.getElementsByClassName("close")[0];
 var Rarrow = document.getElementsByClassName("arrow right")[0];
@@ -7,9 +9,12 @@ var Larrow = document.getElementsByClassName("arrow left")[0];
 exit.onclick = function() { 
   modal.style.display = "none";
 }
+
+//logic for arrows
 var i=0;
 Rarrow.onclick = function() { 
   if (i==19){
+    //if you are at the end of the pics no right arrow
     Rarrow.style.display="none"
   }
   else{
@@ -22,6 +27,7 @@ Rarrow.onclick = function() {
   }
 }
 Larrow.onclick = function() { 
+  //if you are at the start of the pics no left arrow
   if (i==0){
     Larrow.style.display="none"
   }
@@ -52,6 +58,7 @@ function draw(index, img){
   title.innerHTML = img.title;
 }
 
+//shows all pictures in the gallery
 function showAll(){
   for(var j=0; j<20; j++){
     document.getElementsByClassName("pictures")[j].style.display="block";
@@ -59,8 +66,10 @@ function showAll(){
   }
 }
 
+//at the beginning make sure all photos are hidden
 hideAll();
 
+//hides all pictures in the gallery
 function hideAll(){
   for(var j=0; j<20; j++){
     document.getElementsByClassName("pictures")[j].style.display="none";
@@ -68,6 +77,9 @@ function hideAll(){
   }
 }
 
+//Pictures are shown in groups of four
+//all the text on the images must also be hidden or displayed
+//j is just the starting index in the series of 4 photos being hidden
 function showHide(j) {
   var x = document.getElementsByClassName("pictures")[j];
   var x1 = document.getElementsByClassName("pictures")[j+1];
@@ -99,10 +111,13 @@ function showHide(j) {
 }
 
 
-// Get the image and call it to be drawn when clicked
+// Get the image and call it to be drawn larger when clicked
+
+//I could have done this as an "on click" option for each photo and passed in "this" for the photo
+//However I also wanted it to work if you click on text so I did it this way so you don't need a full..
+//..getElement statement in the html for each hover title.
+
 //////////////////////////////////////ALL IMAGES/////////////////////////////////////////////////////
-
-
 var img0 = document.getElementsByClassName("pictures")[0];
 img0.onclick= function(){
   Larrow.style.display="none";
@@ -207,7 +222,8 @@ img19.onclick = function(){
   draw(19,img19);
 }
 
-
+//////////////////////////////////////ALL HOVERS/////////////////////////////////////////////////////
+//hover is the text and fade you see when you hover over a picture
 var h0 = document.getElementsByClassName("hover")[0];
  h0.onclick= function(){
   Larrow.style.display="none";
